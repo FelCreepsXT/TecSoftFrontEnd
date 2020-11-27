@@ -3,7 +3,6 @@
     <v-tabs
         class="asd"
         grow
-
     >
       <v-tab @click="navigateState(0)">Buscar paquete</v-tab>
       <v-tab @click="navigateState(1)">En espera</v-tab>

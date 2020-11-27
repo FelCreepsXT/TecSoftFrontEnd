@@ -1,5 +1,7 @@
 <template>
-  <h1>Home Dealer</h1>
+  <v-card>
+
+  </v-card>
 </template>
 
 <script>

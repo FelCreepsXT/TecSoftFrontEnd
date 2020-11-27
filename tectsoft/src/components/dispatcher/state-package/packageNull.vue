@@ -42,27 +42,43 @@
       >
         <v-list-item three-line>
           <v-list-item-content>
-            <div class="overline mb-4">
-              {{ pack.id }}
-            </div>
             <v-list-item-title class="headline mb-1">
-              {{ pack.description }}
+              <v-row>
+                <v-col cols="20" md="6">
+                  {{ pack.name }}
+                </v-col>
+                <v-spacer></v-spacer>
+                <v-col cols="auto">
+                    <v-chip color="primary">
+                      {{ pack.shipTerminal.terminalOrigin.name }}
+                    </v-chip>
+                </v-col>
+                <v-col cols="auto">
+                  <v-chip color="error">
+                    {{ pack.shipTerminal.terminalDestiny.name }}
+                  </v-chip>
+                </v-col>
+              </v-row>
             </v-list-item-title>
             <v-list-item-subtitle>
-              {{ pack.observations }}
+              {{ pack.description }}
             </v-list-item-subtitle>
+            <v-list-item-content>
+              <v-row>
+                <v-col cols="20" md="6">
+                  {{ pack.observations }}
+                </v-col>
+                <v-col cols="auto" md="6" class="pa-1">
+                  <v-flex class="text-right">
+                    <v-btn color="#00C83A" class="white--text">
+                      Agregar Paquete
+                    </v-btn>
+                  </v-flex>
+                </v-col>
+              </v-row>
+            </v-list-item-content>
           </v-list-item-content>
         </v-list-item>
-        <v-card-actions v-if="name === 'DispatcherState1'">
-          <v-btn
-              outlined
-              rounded
-              text
-              @click="updateState(pack.id,2)"
-          >
-            Adelante
-          </v-btn>
-        </v-card-actions>
       </v-card>
     </div>
   </div>

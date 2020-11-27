@@ -8,10 +8,6 @@ class DispatcherService{
     getId(id){
         return html.get(`/dispatchers/${id}`)
     }
-
-    getByUsernameAndPassword(username, password){
-        return html.get(`/dispatchers/${username}/${password}`)
-    }
 }
 
 export default new DispatcherService();
